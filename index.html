@@ -1,180 +1,235 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>STARBAKE</title>
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
-}
+<link rel="stylesheet" href="style.css">
 
-body{
-background:#fafafa;
-color:#333;
-}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-header{
-background:#8B4513;
-color:white;
-padding:40px 20px;
-text-align:center;
-}
-
-header h1{
-font-size:38px;
-}
-
-header p{
-margin-top:10px;
-font-size:18px;
-}
-
-.hero{
-padding:40px 20px;
-text-align:center;
-}
-
-.hero h2{
-font-size:30px;
-margin-bottom:15px;
-}
-
-.hero p{
-max-width:700px;
-margin:auto;
-line-height:1.7;
-}
-
-.button{
-display:inline-block;
-margin-top:30px;
-padding:15px 30px;
-background:#ff9800;
-color:white;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
-}
-
-.button:hover{
-background:#f57c00;
-}
-
-.section{
-padding:50px 20px;
-}
-
-.section h2{
-text-align:center;
-margin-bottom:25px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:12px;
-max-width:800px;
-margin:auto;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-}
-
-footer{
-margin-top:60px;
-background:#333;
-color:white;
-padding:20px;
-text-align:center;
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header>
 
-<h1>⭐ STARBAKE</h1>
+<div class="container">
 
-<p>Fresh Bakery • Coffee • Pizza • Burger • Sandwich</p>
+<div class="logo">
+⭐ STARBAKE
+</div>
+
+<nav>
+
+<a href="#home">Home</a>
+
+<a href="#menu">Menu</a>
+
+<a href="#tentang">Tentang</a>
+
+<a href="#kontak">Kontak</a>
+
+</nav>
+
+<div class="cart-button">
+
+🛒
+<span id="cart-count">0</span>
+
+</div>
+
+</div>
 
 </header>
 
-<section class="hero">
+<!-- ================= HERO ================= -->
 
-<h2>Selamat Datang di STARBAKE</h2>
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>
+Fresh Bakery Every Day
+</h1>
 
 <p>
 
-STARBAKE menyediakan aneka roti, pizza, burger, kopi dan berbagai makanan berkualitas dengan bahan pilihan serta dibuat setiap hari agar selalu fresh.
+Bakery • Pizza • Burger • Sandwich • Hotdog • Coffee
 
 </p>
 
-<a class="button" href="#">Lihat Menu</a>
+<a href="#menu" class="btn">
+
+Lihat Menu
+
+</a>
+
+</div>
 
 </section>
 
-<section class="section">
+<!-- ================= MENU ================= -->
+
+<section class="menu-section" id="menu">
+
+<h2>Kategori Menu</h2>
+
+<div class="category-grid">
+
+<div class="category-card" id="roti-satuan">
+
+🍞
+
+<h3>Roti Satuan</h3>
+
+<p>Fresh setiap hari</p>
+
+</div>
+
+<div class="category-card" id="roti-bakar">
+
+🍞
+
+<h3>Roti Bakar</h3>
+
+<p>Hangat & Renyah</p>
+
+</div>
+
+<div class="category-card" id="pizza">
+
+🍕
+
+<h3>Pizza</h3>
+
+<p>Fresh Oven</p>
+
+</div>
+
+<div class="category-card" id="burger">
+
+🍔
+
+<h3>Burger</h3>
+
+<p>Juicy Beef</p>
+
+</div>
+
+<div class="category-card" id="sandwich">
+
+🥪
+
+<h3>Sandwich</h3>
+
+<p>Fresh Bread</p>
+
+</div>
+
+<div class="category-card" id="hotdog">
+
+🌭
+
+<h3>Hotdog</h3>
+
+<p>Premium Sausage</p>
+
+</div>
+
+<div class="category-card" id="drinks">
+
+🥤
+
+<h3>Drinks</h3>
+
+<p>Cold & Fresh</p>
+
+</div>
+
+<div class="category-card" id="coffee">
+
+☕
+
+<h3>Coffee</h3>
+
+<p>Fresh Brew</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= TENTANG ================= -->
+
+<section class="about" id="tentang">
 
 <h2>Tentang STARBAKE</h2>
 
-<div class="card">
-
 <p>
 
-Kami melayani pembelian langsung, takeaway, serta pemesanan melalui WhatsApp.
-
-Website ini akan terus dikembangkan sehingga pelanggan dapat memilih menu, memasukkan ke keranjang, dan mengirim pesanan langsung ke WhatsApp.
+STARBAKE menyediakan aneka roti, pizza, burger, sandwich, hotdog, coffee dan minuman dengan bahan berkualitas serta dibuat fresh setiap hari.
 
 </p>
 
-</div>
+</section>
+
+<!-- ================= KONTAK ================= -->
+
+<section class="contact" id="kontak">
+
+<h2>Hubungi Kami</h2>
+
+<p>
+
+WhatsApp : 08xxxxxxxxxx
+
+</p>
+
+<p>
+
+Instagram : @starbake
+
+</p>
 
 </section>
-<section class="section">
 
-<h2>Menu Favorit</h2>
+<!-- ================= CART ================= -->
 
-<div class="card">
+<div id="cart-panel">
 
-<h3>🍕 Pizza</h3>
-<p>Pizza dengan keju mozzarella dan topping premium.</p>
-<p><b>Rp65.000</b></p>
-<a class="button" href="#">Tambah ke Keranjang</a>
+<h2>Keranjang</h2>
 
-<hr style="margin:25px 0;">
+<div id="cart-items">
 
-<h3>🍔 Burger</h3>
-<p>Burger sapi dengan sayuran segar dan saus spesial.</p>
-<p><b>Rp30.000</b></p>
-<a class="button" href="#">Tambah ke Keranjang</a>
-
-<hr style="margin:25px 0;">
-
-<h3>🥪 Sandwich</h3>
-<p>Sandwich isi ayam dan sayuran segar.</p>
-<p><b>Rp25.000</b></p>
-<a class="button" href="#">Tambah ke Keranjang</a>
-
-<hr style="margin:25px 0;">
-
-<h3>☕ Coffee</h3>
-<p>Kopi pilihan dengan cita rasa khas STARBAKE.</p>
-<p><b>Mulai Rp18.000</b></p>
-<a class="button" href="#">Tambah ke Keranjang</a>
+Keranjang masih kosong.
 
 </div>
 
-</section>
+<button id="checkout">
+
+Kirim Pesanan WhatsApp
+
+</button>
+
+</div>
+
 <footer>
 
 © 2026 STARBAKE
 
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
