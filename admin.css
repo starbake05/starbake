@@ -189,3 +189,15 @@ body{
     justify-content:flex-end;
     margin-top:20px;
 }
+.deleteBtn{
+    background:#dc3545;
+    color:white;
+    padding:8px 14px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.deleteBtn:hover{
+    background:#b02a37;
+}
