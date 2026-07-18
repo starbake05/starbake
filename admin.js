@@ -1,3 +1,21 @@
+function generateSKU(category){
+
+    const prefix = {
+        "Roti Satuan":"RB",
+        "Roti Bakar":"RK",
+        "Pizza":"PZ",
+        "Burger":"BG",
+        "Sandwich":"SW",
+        "Hotdog":"HD",
+        "Drinks":"DR",
+        "Coffee":"CF"
+    };
+
+    const code = prefix[category] || "PR";
+
+    return code + String(Date.now()).slice(-4);
+
+}
 const modal = document.getElementById("productModal");
 
 const addButton = document.getElementById("addProduct");
