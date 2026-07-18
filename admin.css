@@ -339,3 +339,10 @@ transform:translateX(24px);
 .statusText{
 font-weight:bold;
 }
+.productPhoto{
+    width:60px;
+    height:60px;
+    object-fit:cover;
+    border-radius:10px;
+    border:1px solid #ddd;
+}
