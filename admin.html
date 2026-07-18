@@ -75,12 +75,28 @@
       <option>Coffee</option>
     </select>
 
-    <label>Status</label>
+    <label>Status Produk</label>
 
-    <select id="productStatus">
-      <option>Tersedia</option>
-      <option>Habis</option>
-    </select>
+<div class="status-group">
+
+<label>
+<input type="radio"
+name="productStatus"
+value="Tersedia"
+checked>
+
+🟢 Tersedia
+</label>
+
+<label>
+<input type="radio"
+name="productStatus"
+value="Habis">
+
+🔴 Habis
+</label>
+
+</div>
 
     <label>Foto Produk</label>
     <input type="file">
