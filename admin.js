@@ -115,3 +115,33 @@ reader.readAsDataURL(file);
 }
 
 });
+document.addEventListener("change",function(event){
+
+if(event.target.classList.contains("statusToggle")){
+
+const text =
+event.target
+.parentElement
+.nextElementSibling;
+
+if(event.target.checked){
+
+text.textContent="Tersedia";
+
+text.classList.remove("unavailable");
+
+text.classList.add("available");
+
+}else{
+
+text.textContent="Habis";
+
+text.classList.remove("available");
+
+text.classList.add("unavailable");
+
+}
+
+}
+
+});
