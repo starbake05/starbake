@@ -25,7 +25,10 @@ saveButton.onclick = function(){
     const name = document.getElementById("productName").value;
     const price = document.getElementById("productPrice").value;
     const category = document.getElementById("productCategory").value;
-    const status = document.getElementById("productStatus").value;
+    const status =
+document.querySelector(
+'input[name="productStatus"]:checked'
+).value;
 
     if(name==="" || price===""){
         alert("Nama produk dan harga wajib diisi.");
