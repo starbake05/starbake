@@ -42,9 +42,30 @@ document.querySelector(
         <td>${category}</td>
         <td>Rp ${Number(price).toLocaleString("id-ID")}</td>
         <td>
-    <span class="${status === "Tersedia" ? "available" : "unavailable"}">
-        ${status}
-    </span>
+
+<label class="switch">
+
+<input
+type="checkbox"
+class="statusToggle"
+${status==="Tersedia" ? "checked" : ""}>
+
+<span class="slider"></span>
+
+</label>
+
+<span class="statusText ${
+status==="Tersedia"
+?
+"available"
+:
+"unavailable"
+}">
+
+${status}
+
+</span>
+
 </td>
         <td>
             <button class="deleteBtn">Hapus</button>
