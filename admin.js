@@ -17,7 +17,7 @@ function generateSKU(category){
 
 }
 const modal = document.getElementById("productModal");
-
+let editingRow = null;
 const addButton = document.getElementById("addProduct");
 
 const closeButton = document.getElementById("closeModal");
@@ -117,12 +117,24 @@ ${status}
 
 `;
 
+    if(editingRow){
+
+    editingRow.replaceWith(row);
+
+    editingRow = null;
+
+}else{
+
     table.appendChild(row);
 
-    document.getElementById("productName").value="";
-    document.getElementById("productPrice").value="";
+}
 
-    modal.style.display="none";
+document.getElementById("productName").value="";
+document.getElementById("productPrice").value="";
+
+document.getElementById("productImage").value="";
+
+modal.style.display="none";
 }
 document.addEventListener("click", function(event){
 
