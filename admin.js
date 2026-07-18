@@ -51,3 +51,16 @@ saveButton.onclick = function(){
 
     modal.style.display="none";
 }
+document.addEventListener("click", function(event){
+
+    if(event.target.classList.contains("deleteBtn")){
+
+        if(confirm("Yakin ingin menghapus produk ini?")){
+
+            event.target.closest("tr").remove();
+
+        }
+
+    }
+
+});
