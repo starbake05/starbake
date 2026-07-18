@@ -41,7 +41,11 @@ document.querySelector(
         <td>${name}</td>
         <td>${category}</td>
         <td>Rp ${Number(price).toLocaleString("id-ID")}</td>
-        <td>${status}</td>
+        <td>
+    <span class="${status === "Tersedia" ? "available" : "unavailable"}">
+        ${status}
+    </span>
+</td>
         <td>
             <button class="deleteBtn">Hapus</button>
         </td>
