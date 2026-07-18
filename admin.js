@@ -47,7 +47,18 @@ saveButton.onclick = function(){
 document.querySelector(
 'input[name="productStatus"]:checked'
 ).value;
+const imageFile =
+document.getElementById("productImage").files[0];
 
+let imageURL =
+"https://placehold.co/80x80?text=Foto";
+
+if(imageFile){
+
+imageURL =
+URL.createObjectURL(imageFile);
+
+}
     if(name==="" || price===""){
         alert("Nama produk dan harga wajib diisi.");
         return;
