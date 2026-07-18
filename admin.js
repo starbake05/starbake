@@ -66,11 +66,23 @@ URL.createObjectURL(imageFile);
 
     const row = document.createElement("tr");
 
-    row.innerHTML = `
-        <td>${name}</td>
-        <td>${category}</td>
-        <td>Rp ${Number(price).toLocaleString("id-ID")}</td>
-        <td>
+    const sku = generateSKU(category);
+
+row.innerHTML = `
+
+<td>${sku}</td>
+
+<td>
+    <img src="${imageURL}" class="productPhoto">
+</td>
+
+<td>${name}</td>
+
+<td>${category}</td>
+
+<td>Rp ${Number(price).toLocaleString("id-ID")}</td>
+
+<td>
 
 <label class="switch">
 
@@ -90,16 +102,20 @@ status==="Tersedia"
 :
 "unavailable"
 }">
-
 ${status}
-
 </span>
 
 </td>
-        <td>
-            <button class="deleteBtn">Hapus</button>
-        </td>
-    `;
+
+<td>
+
+<button class="editBtn">✏️</button>
+
+<button class="deleteBtn">🗑️</button>
+
+</td>
+
+`;
 
     table.appendChild(row);
 
