@@ -139,5 +139,9 @@ body{
 .content{
     padding:20px;
 }
-
+.sidebar a.active{
+    background:#ffffff;
+    color:#6b3e26;
+    font-weight:bold;
+}
 }
