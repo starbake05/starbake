@@ -18,6 +18,7 @@ function generateSKU(category){
 }
 const modal = document.getElementById("productModal");
 let editingRow = null;
+let currentImageURL = "";
 const addButton = document.getElementById("addProduct");
 
 const closeButton = document.getElementById("closeModal");
