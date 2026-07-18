@@ -50,13 +50,26 @@ document.querySelector(
 const imageFile =
 document.getElementById("productImage").files[0];
 
-let imageURL =
-"https://placehold.co/80x80?text=Foto";
+let imageURL;
 
+// Kalau sedang edit, gunakan foto lama
+if(editingRow){
+
+    imageURL =
+    editingRow.querySelector(".productPhoto").src;
+
+}else{
+
+    imageURL =
+    "https://placehold.co/80x80?text=Foto";
+
+}
+
+// Kalau memilih foto baru
 if(imageFile){
 
-imageURL =
-URL.createObjectURL(imageFile);
+    imageURL =
+    URL.createObjectURL(imageFile);
 
 }
     if(name==="" || price===""){
