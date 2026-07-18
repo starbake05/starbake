@@ -202,3 +202,40 @@ text.classList.add("unavailable");
 }
 
 });
+
+document.addEventListener("click", function(event){
+
+    if(event.target.classList.contains("editBtn")){
+
+        editingRow = event.target.closest("tr");
+
+        const cells = editingRow.querySelectorAll("td");
+
+        // Nama Produk
+        document.getElementById("productName").value =
+        cells[2].textContent;
+
+        // Kategori
+        document.getElementById("productCategory").value =
+        cells[3].textContent;
+
+        // Harga
+        document.getElementById("productPrice").value =
+        cells[4].textContent
+            .replace("Rp","")
+            .replace(/\./g,"")
+            .trim();
+
+        // Status
+        const status =
+        cells[5].querySelector(".statusText").textContent;
+
+        document.querySelector(
+        `input[name="productStatus"][value="${status}"]`
+        ).checked = true;
+
+        modal.style.display = "flex";
+
+    }
+
+});
