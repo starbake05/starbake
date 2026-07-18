@@ -17,3 +17,37 @@ window.onclick = function(event){
         modal.style.display = "none";
     }
 };
+const saveButton = document.getElementById("saveProduct");
+const table = document.getElementById("productTable");
+
+saveButton.onclick = function(){
+
+    const name = document.getElementById("productName").value;
+    const price = document.getElementById("productPrice").value;
+    const category = document.getElementById("productCategory").value;
+    const status = document.getElementById("productStatus").value;
+
+    if(name==="" || price===""){
+        alert("Nama produk dan harga wajib diisi.");
+        return;
+    }
+
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+        <td>${name}</td>
+        <td>${category}</td>
+        <td>Rp ${Number(price).toLocaleString("id-ID")}</td>
+        <td>${status}</td>
+        <td>
+            <button class="deleteBtn">Hapus</button>
+        </td>
+    `;
+
+    table.appendChild(row);
+
+    document.getElementById("productName").value="";
+    document.getElementById("productPrice").value="";
+
+    modal.style.display="none";
+}
