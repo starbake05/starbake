@@ -390,3 +390,16 @@ th:nth-child(6), td:nth-child(6){
 th:nth-child(7), td:nth-child(7){
     width:120px;
 }
+#searchProduct{
+    width:300px;
+    padding:10px 15px;
+    margin-left:15px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:14px;
+    outline:none;
+}
+
+#searchProduct:focus{
+    border-color:#8B4513;
+}
