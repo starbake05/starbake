@@ -39,25 +39,7 @@ document.querySelectorAll("#productTable tr");
     return code + String(lastNumber + 1).padStart(3,"0");
 
 }
-function generateSKU(category){
 
-    const prefix = {
-        "Roti Satuan":"RB",
-        "Roti Bakar":"RK",
-        "Pizza":"PZ",
-        "Burger":"BG",
-        "Sandwich":"SW",
-        "Hotdog":"HD",
-        "Drinks":"DR",
-        "Coffee":"CF"
-    };
-
-    skuCounter[category]++;
-
-    return prefix[category] +
-    String(skuCounter[category]).padStart(3,"0");
-
-}
 const modal = document.getElementById("productModal");
 let editingRow = null;
 let currentImageURL = "";
