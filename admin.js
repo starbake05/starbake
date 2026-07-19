@@ -15,7 +15,8 @@ function generateSKU(category){
 
     let lastNumber = 0;
 
-    const rows = table.querySelectorAll("tr");
+    const rows =
+document.querySelectorAll("#productTable tr");
 
     rows.forEach(function(row){
 
