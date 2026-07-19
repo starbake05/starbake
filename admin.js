@@ -289,3 +289,30 @@ searchInput.addEventListener("keyup", function(){
     });
 
 });
+const filterCategory =
+document.getElementById("filterCategory");
+
+filterCategory.addEventListener("change", function(){
+
+    const category = this.value;
+
+    const rows = table.querySelectorAll("tr");
+
+    rows.forEach(function(row){
+
+        const productCategory =
+        row.cells[3].textContent;
+
+        if(category==="Semua" || productCategory===category){
+
+            row.style.display="";
+
+        }else{
+
+            row.style.display="none";
+
+        }
+
+    });
+
+});
