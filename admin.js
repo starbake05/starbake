@@ -263,3 +263,29 @@ document.addEventListener("click", function(event){
     }
 
 });
+const searchInput = document.getElementById("searchProduct");
+
+searchInput.addEventListener("keyup", function(){
+
+    const keyword = this.value.toLowerCase();
+
+    const rows = table.querySelectorAll("tr");
+
+    rows.forEach(function(row){
+
+        const productName =
+        row.cells[2].textContent.toLowerCase();
+
+        if(productName.includes(keyword)){
+
+            row.style.display="";
+
+        }else{
+
+            row.style.display="none";
+
+        }
+
+    });
+
+});
