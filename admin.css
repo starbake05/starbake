@@ -399,7 +399,20 @@ th:nth-child(7), td:nth-child(7){
     font-size:14px;
     outline:none;
 }
+#filterCategory{
+    width:200px;
+    padding:10px 15px;
+    margin-left:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:14px;
+    background:white;
+    cursor:pointer;
+}
 
+#filterCategory:focus{
+    border-color:#8B4513;
+}
 #searchProduct:focus{
     border-color:#8B4513;
 }
