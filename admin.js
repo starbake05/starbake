@@ -1,13 +1,43 @@
-const skuCounter = {
-    "Roti Satuan":0,
-    "Roti Bakar":0,
-    "Pizza":0,
-    "Burger":0,
-    "Sandwich":0,
-    "Hotdog":0,
-    "Drinks":0,
-    "Coffee":0
-};
+function generateSKU(category){
+
+    const prefix = {
+        "Roti Satuan":"RB",
+        "Roti Bakar":"RK",
+        "Pizza":"PZ",
+        "Burger":"BG",
+        "Sandwich":"SW",
+        "Hotdog":"HD",
+        "Drinks":"DR",
+        "Coffee":"CF"
+    };
+
+    const code = prefix[category] || "PR";
+
+    let lastNumber = 0;
+
+    const rows = table.querySelectorAll("tr");
+
+    rows.forEach(function(row){
+
+        const sku = row.cells[0].textContent;
+
+        if(sku.startsWith(code)){
+
+            const number = parseInt(sku.replace(code,""));
+
+            if(number > lastNumber){
+
+                lastNumber = number;
+
+            }
+
+        }
+
+    });
+
+    return code + String(lastNumber + 1).padStart(3,"0");
+
+}
 function generateSKU(category){
 
     const prefix = {
