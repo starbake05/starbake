@@ -80,7 +80,17 @@ if(imageFile){
 
     const row = document.createElement("tr");
 
-    const sku = generateSKU(category);
+    let sku;
+
+if(editingRow){
+
+    sku = editingRow.cells[0].textContent;
+
+}else{
+
+    sku = generateSKU(category);
+
+}
 
 row.innerHTML = `
 
