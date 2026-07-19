@@ -1,3 +1,13 @@
+const skuCounter = {
+    "Roti Satuan":0,
+    "Roti Bakar":0,
+    "Pizza":0,
+    "Burger":0,
+    "Sandwich":0,
+    "Hotdog":0,
+    "Drinks":0,
+    "Coffee":0
+};
 function generateSKU(category){
 
     const prefix = {
@@ -11,9 +21,10 @@ function generateSKU(category){
         "Coffee":"CF"
     };
 
-    const code = prefix[category] || "PR";
+    skuCounter[category]++;
 
-    return code + String(Date.now()).slice(-4);
+    return prefix[category] +
+    String(skuCounter[category]).padStart(3,"0");
 
 }
 const modal = document.getElementById("productModal");
