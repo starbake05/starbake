@@ -186,7 +186,78 @@ alt="Preview">
 </table>
 
 </div>
+<!-- =========================
+     MODAL MASTER KATEGORI
+========================== -->
 
+<div id="categoryModal" class="modal">
+
+    <div class="modal-content">
+
+        <h2>Master Kategori</h2>
+
+        <label>Kode SKU</label>
+        <input
+        type="text"
+        id="categoryCode"
+        placeholder="Contoh : BG">
+
+        <label>Nama Kategori</label>
+        <input
+        type="text"
+        id="categoryName"
+        placeholder="Contoh : Burger">
+
+        <label>Icon</label>
+        <input
+        type="text"
+        id="categoryIcon"
+        placeholder="🍔">
+
+        <label>Status</label>
+
+        <div class="status-group">
+
+            <label>
+
+                <input
+                type="radio"
+                name="categoryStatus"
+                value="Aktif"
+                checked>
+
+                🟢 Aktif
+
+            </label>
+
+            <label>
+
+                <input
+                type="radio"
+                name="categoryStatus"
+                value="Nonaktif">
+
+                🔴 Nonaktif
+
+            </label>
+
+        </div>
+
+        <div class="modal-buttons">
+
+            <button id="saveCategory">
+                Simpan
+            </button>
+
+            <button id="closeCategory">
+                Batal
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
 <script src="admin.js"></script>
 
 </body>
