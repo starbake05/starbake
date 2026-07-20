@@ -416,3 +416,29 @@ th:nth-child(7), td:nth-child(7){
 #searchProduct:focus{
     border-color:#8B4513;
 }
+/* ===========================
+   Action Buttons
+=========================== */
+
+.action-buttons{
+    display:flex;
+    gap:12px;
+    margin:20px 0;
+    flex-wrap:wrap;
+}
+
+.action-buttons button{
+    padding:12px 22px;
+    border:none;
+    border-radius:8px;
+    background:#8B4513;
+    color:#fff;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.action-buttons button:hover{
+    background:#6f3510;
+}
