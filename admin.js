@@ -126,7 +126,7 @@ row.innerHTML = `
 
 <td>${name}</td>
 
-<td>${category}</td>
+<td>${getCategoryIcon(category)} ${category}</td>
 
 <td>Rp ${Number(price).toLocaleString("id-ID")}</td>
 
@@ -264,8 +264,14 @@ document.addEventListener("click", function(event){
         cells[2].textContent;
 
         // Kategori
-        document.getElementById("productCategory").value =
-        cells[3].textContent;
+        const categoryText =
+cells[3].textContent.trim();
+
+const categoryName =
+categoryText.replace(/^[^\s]+\s/, "");
+
+document.getElementById("productCategory").value =
+categoryName;
 
         // Harga
         document.getElementById("productPrice").value =
