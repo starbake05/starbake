@@ -1,29 +1,237 @@
-// ===============================
-// STARBAKE STORAGE V1.1
-// ===============================
+// ==========================================
+// STARBAKE STORAGE V1.2
+// ==========================================
 
-// Nama penyimpanan di browser
-const STORAGE_KEY = "starbake_products";
+// =======================
+// STORAGE KEY
+// =======================
 
-// Ambil semua produk
-function getProducts() {
+const STORAGE = {
 
-    const data = localStorage.getItem(STORAGE_KEY);
+    PRODUCTS: "starbake_products",
 
-    if (!data) {
-        return [];
-    }
+    CATEGORIES: "starbake_categories",
+
+    PAYMENTS: "starbake_payments",
+
+    BANNERS: "starbake_banners",
+
+    PROMOS: "starbake_promos",
+
+    SETTINGS: "starbake_settings",
+
+    ORDERS: "starbake_orders"
+
+};
+
+
+// =======================
+// GENERIC FUNCTION
+// =======================
+
+function loadData(key) {
+
+    const data = localStorage.getItem(key);
+
+    if (!data) return [];
 
     return JSON.parse(data);
 
 }
 
-// Simpan semua produk
-function saveProducts(products) {
+function saveData(key, value) {
 
     localStorage.setItem(
-        STORAGE_KEY,
-        JSON.stringify(products)
+
+        key,
+
+        JSON.stringify(value)
+
+    );
+
+}
+
+
+// =======================
+// PRODUCTS
+// =======================
+
+function getProducts() {
+
+    return loadData(STORAGE.PRODUCTS);
+
+}
+
+function saveProducts(products) {
+
+    saveData(
+
+        STORAGE.PRODUCTS,
+
+        products
+
+    );
+
+}
+
+
+// =======================
+// CATEGORIES
+// =======================
+
+function getCategories() {
+
+    return loadData(
+
+        STORAGE.CATEGORIES
+
+    );
+
+}
+
+function saveCategories(categories) {
+
+    saveData(
+
+        STORAGE.CATEGORIES,
+
+        categories
+
+    );
+
+}
+
+
+// =======================
+// PAYMENTS
+// =======================
+
+function getPayments() {
+
+    return loadData(
+
+        STORAGE.PAYMENTS
+
+    );
+
+}
+
+function savePayments(payments) {
+
+    saveData(
+
+        STORAGE.PAYMENTS,
+
+        payments
+
+    );
+
+}
+
+
+// =======================
+// BANNERS
+// =======================
+
+function getBanners() {
+
+    return loadData(
+
+        STORAGE.BANNERS
+
+    );
+
+}
+
+function saveBanners(banners) {
+
+    saveData(
+
+        STORAGE.BANNERS,
+
+        banners
+
+    );
+
+}
+
+
+// =======================
+// PROMOS
+// =======================
+
+function getPromos() {
+
+    return loadData(
+
+        STORAGE.PROMOS
+
+    );
+
+}
+
+function savePromos(promos) {
+
+    saveData(
+
+        STORAGE.PROMOS,
+
+        promos
+
+    );
+
+}
+
+
+// =======================
+// SETTINGS
+// =======================
+
+function getSettings() {
+
+    return loadData(
+
+        STORAGE.SETTINGS
+
+    );
+
+}
+
+function saveSettings(settings) {
+
+    saveData(
+
+        STORAGE.SETTINGS,
+
+        settings
+
+    );
+
+}
+
+
+// =======================
+// ORDERS
+// =======================
+
+function getOrders() {
+
+    return loadData(
+
+        STORAGE.ORDERS
+
+    );
+
+}
+
+function saveOrders(orders) {
+
+    saveData(
+
+        STORAGE.ORDERS,
+
+        orders
+
     );
 
 }
