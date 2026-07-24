@@ -1,3 +1,4 @@
+alert("ADMIN.JS BERJALAN");
 function generateSKU(category){
 
     const prefix = {
