@@ -331,7 +331,10 @@ filterCategory.addEventListener("change", function(){
     rows.forEach(function(row){
 
         const productCategory =
-        row.cells[3].textContent;
+row.cells[3]
+.textContent
+.replace(/^[^\s]+\s/,"")
+.trim();
 
         if(category==="Semua" || productCategory===category){
 
