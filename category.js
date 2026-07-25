@@ -150,7 +150,7 @@ function loadCategoryDropdown(){
         filterCategory.appendChild(option2);
 
     });
-
+console.log("Dropdown kategori berhasil diisi");
 }
 
 
