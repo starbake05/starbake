@@ -376,14 +376,5 @@ function initCategoryModule(){
 
 }
 
-document.addEventListener(
-
-    "DOMContentLoaded",
-
-    function(){
-
-        initCategoryModule();
-
-    }
-
-);
+// Jalankan langsung
+initCategoryModule();
