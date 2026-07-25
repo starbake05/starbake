@@ -73,6 +73,13 @@ saveButton.onclick = function(){
     const name = document.getElementById("productName").value;
     const price = document.getElementById("productPrice").value;
     const category = document.getElementById("productCategory").value;
+    if(category===""){
+
+    alert("Pilih kategori terlebih dahulu.");
+
+    return;
+
+}
     const status =
 document.querySelector(
 'input[name="productStatus"]:checked'
