@@ -119,7 +119,11 @@ function loadCategoryDropdown(){
 
     const categories =
     getCategories();
-console.log(categories);
+
+    console.log(categories);
+
+    alert("Jumlah kategori: " + categories.length);
+
     productCategory.innerHTML="";
 
     filterCategory.innerHTML=
@@ -150,7 +154,9 @@ console.log(categories);
         filterCategory.appendChild(option2);
 
     });
-console.log("Dropdown kategori berhasil diisi");
+
+    console.log("Dropdown kategori berhasil diisi");
+
 }
 
 
