@@ -119,7 +119,7 @@ function loadCategoryDropdown(){
 
     const categories =
     getCategories();
-
+console.log(categories);
     productCategory.innerHTML="";
 
     filterCategory.innerHTML=
